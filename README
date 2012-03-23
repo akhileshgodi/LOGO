@@ -1,0 +1,27 @@
+  				
+                          				          A GUIDE TO USING MY LOGO
+
+
+                                                                                            - Akhilesh Godi (CS10B037)
+
+
+1.	 How it works:
+
+	Graphics mode was made use of in Assembly. The input is taken at the bottom of the screen and then, the String Recognizer Procedure which reads the string and checks if it is a valid command. In case it is valid it does the appropriate action.
+
+	Initially the turtle is located at the centre of the screen. The angle data field characterizes the angle at which the cursor is tilted and the turtle_row and turtle_col  have the row and column position of the turtle. When any instruction is given, the turtle moves forward by the length given by the user depending on the angle of orientation. A line is drawn pixel by pixel using the pixel_row and pixel_col.
+
+2.	Features it supports :
+
+	The user can input any number of instructions on one line. The program also ignores spaces in between words. For example: FD10 is treated as FD 10.  Upper case and lower case letters are treated equally. There can be any number of spaces in between the instruction followed by the length or angle. FD 10 is equivalent to fD		10.  The program also takes into account negative numbers. For example FD -10 is treated as BK 10. Similarly angles are also taken care of.
+If the user inputs an angle more that 360, we find the remainder on dividing by 360 and that would be the angle by which the turtle has to be tilted. Ex.  RT 500 is equivalent to RT 140. In case the user enters an angle which is not a multiple of 45, the turtle yet tilts by that angle. In case an FD instruction is given in the case when the angle is not a multiple of 45. It does nothing.
+
+ 	Movements like FD and BK are supported only when the angle is a multiple of 45, as the co-ordinates on the screen are always integer co-ordinates. So drawing a line at an angle not equivalent to a multiple of 45, would not be proper. 
+
+The user needs to enter bye in order to leave the program.
+
+
+3. 	What the program does not do :
+
+	The program only displays the pixels on the screen. The implementation for displaying the turtle at different angles was not done as it is a tedious task. Nested repeats will not be taken care of, and will be treated as wrong input and nothing will be done in the case there is a nested repeat (RP).
+If the screen goes out of bound when the angle is 45,135,225,315 ; an error message is displayed and the program is terminated. In all other cases, the program works perfectly fine. Any other bugs if found can be brought into my notice, by dropping me a mail at akhileshgodi93@gmail.com.
